@@ -7,7 +7,7 @@ import argparse
 import scipy.special
 from collections import defaultdict
 
-class MUM:
+class IMUM:
     def __init__(self, data):
         self.corpus_file = data
         self.target_word = defaultdict(int)
@@ -201,10 +201,10 @@ class MUM:
 
 
 def main(args):
-    mum = MUM(args.data)
-    mum.set_param(args.alpha, args.beta, args.N, args.converge)
-    mum.learn()
-    mum.output_model()
+    imum = IMUM(args.data)
+    imum.set_param(args.alpha, args.beta, args.N, args.converge)
+    imum.learn()
+    imum.output_model()
 
 
 if __name__ == "__main__":
