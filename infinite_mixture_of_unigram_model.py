@@ -170,7 +170,7 @@ class IMUM:
                 return state
 
     def output_model(self):
-        print "model\tmixture_of_unigram_model"
+        print "model\tinfinite_mixture_of_unigram_model"
         print "@parameter"
         print "corpus_file\t%s"%self.corpus_file
         print "hyper_parameter_alpha\t%f"%self.alpha
