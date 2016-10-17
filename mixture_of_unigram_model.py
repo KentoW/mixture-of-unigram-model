@@ -56,17 +56,17 @@ class MUM:
                         break
 
     def initialize(self):
-        for song in self.corpus:
-            song["state"] = 0
+        for doc in self.corpus:
+            doc["state"] = 0
 
     def likelihood(self):
         likelihoods = []
-        for song in self.corpus:
+        for doc in self.corpus:
             over_flow = []
             for z in xrange(1, self.K+1):
                 l_topic = math.log((self.topic_document_freq[z] + self.alpha)/(self.topic_document_sum + (self.alpha * self.K)))
                 l_words = 0.0
-                for v in song["bag_of_words"]:
+                for v in doc["bag_of_words"]:
                     theta = math.log((self.topic_word_freq[z][v] + self.beta)/(self.topic_word_sum[z] + (self.beta * self.V)))
                     l_words += theta
                 l_doc = l_topic + l_words
