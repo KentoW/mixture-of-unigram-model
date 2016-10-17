@@ -54,6 +54,7 @@ class MUM:
                     diff = self.lkhds[-1] - self.lkhds[-2]
                     if math.fabs(diff) < self.converge:
                         break
+        self.n = i+1
 
     def initialize(self):
         for doc in self.corpus:
