@@ -1,8 +1,8 @@
 # mixture-of-unigram-model
-##概要
+## 概要
 混合ユニグラムモデル(mixture of unigram model)をPythonで実装  
 無限混合ユニグラムモデル(infinite mixture of unigram model)をPythonで実装  
-##mixture_of_unigram_model.pyの使い方(混合ユニグラムモデル)
+## mixture_of_unigram_model.pyの使い方(混合ユニグラムモデル)
 ```python
 # Sample code.
 from mixture_of_unigram_model import MUM
@@ -18,7 +18,7 @@ mum.set_param(alpha, beta, K, N, converge)
 mum.learn()
 mum.output_model()
 ```
-##infinite_mixture_of_unigram_model.pyの使い方(無限混合ユニグラムモデル)
+## infinite_mixture_of_unigram_model.pyの使い方(無限混合ユニグラムモデル)
 ```python
 # Sample code.
 from infinite_mixture_of_unigram_model import IMUM
@@ -33,7 +33,7 @@ imum.set_param(alpha, beta, N, converge)
 imum.learn()
 imum.output_model()
 ```
-##入力フォーマット
+## 入力フォーマット
 1単語をスペースで分割した1行1文書形式  
 先頭に#(シャープ)記号を入れてコメントを記述可能
 ```
@@ -44,7 +44,7 @@ imum.output_model()
 ...
 ```
 例として[Wiki.py](https://github.com/KentoW/wiki)を使用して収集した アニメのあらすじ文章をdata.txtに保存
-##出力フォーマット
+## 出力フォーマット
 必要な情報は各自で抜き取って使用してください．
 ```
 model	mixture_of_unigram_model        # 学習の種類
